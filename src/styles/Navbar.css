@@ -1,0 +1,121 @@
+/* Main navbar container */
+.navbar {
+  width: 100%; /* Full width */
+  height: 100px; /* Fixed height */
+  background-color: #121619; /* Dark background color */
+  display: flex; /* Use flexbox for layout */
+  flex-direction: row; /* Arrange child items horizontally */
+}
+
+/* Left side of the navbar (e.g., logo area) */
+.navbar .leftSide {
+  flex: 50%; /* Take up 50% of the navbar width */
+  height: 100%; /* Full height of the navbar */
+  display: flex; /* Flexbox for internal alignment */
+  align-items: center; /* Center vertically */
+  padding-left: 150px; /* Push content in from the left */
+}
+
+/* Logo image on the left side */
+.navbar .leftSide img {
+  width: 70px; /* Logo image size */
+}
+
+/* Right side of the navbar (e.g., links and menu icon) */
+.navbar .rightSide {
+  flex: 50%; /* Take up remaining 50% of the navbar */
+  height: 100%; /* Full height */
+  display: flex; /* Flex layout */
+  align-items: center; /* Center vertically */
+  justify-content: center; /* Center horizontally */
+}
+
+/* Links in the navbar */
+.navbar a {
+  color: white; /* White text */
+  text-decoration: none; /* Remove underline */
+  margin: 20px; /* Space between links */
+}
+
+/* Menu toggle button on right side */
+.navbar .rightSide button {
+  background-color: transparent; /* No background */
+  border: none; /* No border */
+  color: white; /* White icon/text */
+  cursor: pointer; /* Pointer on hover */
+}
+
+/* Icon inside the button (hamburger or close icon) */
+.navbar .rightSide svg {
+  font-size: 40px; /* Large size for visibility */
+}
+
+/* When menu is open: adjust padding and show hidden links */
+.navbar #open {
+  padding-left: 0px;
+}
+.navbar #open img {
+  display: none; /* Hide default image when menu is open */
+}
+
+/* When menu is closed: show default image */
+.navbar #close img {
+  display: inherit; /* Show image normally */
+}
+
+/* Show hidden links when menu is open (for small screens) */
+.navbar #open .hiddenLinks {
+  display: inherit;
+  margin-left: 30px;
+}
+
+/* Hide hidden links when menu is closed */
+.navbar #close .hiddenLinks {
+  display: none;
+}
+
+/* Adjust link size when open */
+.navbar #open a {
+  width: 70px;
+  margin: 5px;
+}
+
+/* --- Media Queries for Responsive Design --- */
+
+/* Medium screen: Adjust padding and link widths */
+@media only screen and (max-width: 900px) {
+  .navbar .rightSide a {
+    width: 70px; /* Limit link width */
+  }
+
+  .navbar .leftSide {
+    padding-left: 50px; /* Reduce left padding */
+  }
+}
+
+/* Small screens (mobile): Hide links, show menu button */
+@media only screen and (max-width: 600px) {
+  .navbar .rightSide a {
+    display: none; /* Hide nav links */
+  }
+
+  .navbar .rightSide {
+    justify-content: flex-end; /* Push menu icon to far right */
+    padding-right: 50px; /* Right padding */
+  }
+
+  .navbar .rightSide button {
+    display: inherit; /* Show the hamburger/close button */
+  }
+}
+
+/* Larger screens: Show links, hide toggle button */
+@media only screen and (min-width: 600px) {
+  .navbar .rightSide button {
+    display: none; /* Hide hamburger menu button */
+  }
+
+  .hiddenLinks {
+    display: none; /* Do not show hidden links */
+  }
+}

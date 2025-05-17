@@ -1,0 +1,93 @@
+/* Main container for the contact section */
+.contact {
+  width: 100%;
+  height: 90vh; /* Takes 90% of the viewport height */
+  display: flex; /* Horizontal layout for left and right sides */
+}
+
+/* Left side of the contact page (typically has background image) */
+.contact .leftSide {
+  height: 100%;
+  flex: 50%; /* Takes half of the horizontal space */
+  background-position: center; /* Center the image */
+  background-repeat: no-repeat; /* No repeating image */
+  background-size: cover; /* Image covers the entire container */
+}
+
+/* Right side where the form resides */
+.contact .rightSide {
+  height: 100%;
+  flex: 50%; /* Takes the other half */
+  display: flex;
+  flex-direction: column;
+  justify-content: center; /* Vertically centers the form */
+}
+
+/* Styling the heading inside the form section */
+.contact .rightSide h1 {
+  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
+    "Lucida Sans", Arial, sans-serif; /* Clean, modern fonts */
+  font-weight: 10; /* Very light text */
+  font-size: 50px;
+  margin-left: 30px; /* Gives spacing from the left */
+}
+
+/* Form container */
+form {
+  display: flex;
+  flex-direction: column; /* Vertical stacking of inputs */
+  width: auto;
+  height: auto;
+  padding: 30px;
+}
+
+/* Input field styling */
+form input {
+  height: 40px;
+  width: 80%;
+  border: none;
+  border-bottom: 1px solid #121619; /* Underline-style border */
+  color: black;
+}
+
+/* Textarea styling (for message box) */
+form textarea {
+  margin-top: 15px;
+  height: 70px;
+  width: 80%;
+  border: none;
+  border-bottom: 1px solid #121619;
+  color: black;
+}
+
+/* Placeholder text for inputs and textareas */
+input::placeholder,
+textarea::placeholder {
+  font-weight: bold;
+  color: black;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+/* Removes blue outline on focus */
+form input:focus,
+textarea:focus {
+  outline: none;
+}
+
+/* Label for each form input */
+form label {
+  margin-top: 15px;
+  color: grey;
+}
+
+/* Submit button styling */
+form button {
+  margin-top: 40px;
+  width: 140px;
+  height: 40px;
+  border: none;
+  background-color: #121619; /* Dark background */
+  color: whitesmoke;
+  font-size: 15px;
+  cursor: pointer; /* Pointer on hover */
+}

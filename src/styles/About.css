@@ -1,0 +1,60 @@
+/* Main container for the About page */
+.about {
+  width: 100%; /* Full width of the viewport */
+  height: 90vh; /* Takes up 90% of the viewport height */
+  display: flex; /* Enables flexbox layout */
+  flex-direction: column; /* Stacks child elements vertically */
+}
+
+/* Top section with background image */
+.aboutTop {
+  width: 100%; /* Full width */
+  height: 45%; /* Takes 45% of the .about container height */
+  background-position: center; /* Center the background image */
+  background-repeat: no-repeat; /* Prevent image repetition */
+  background-size: cover; /* Cover entire area with the image */
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif; /* Font styling */
+}
+
+/* Bottom section containing heading and paragraph */
+.aboutBottom {
+  display: flex; /* Flex container */
+  flex-direction: column; /* Stack children vertically */
+  height: 55%; /* Takes the remaining 55% height */
+  align-items: center; /* Center items horizontally */
+  margin-top: 50px; /* Space above this section */
+}
+
+.aboutBottom p {
+  max-width: 1200px; /* Allows flexibility */
+  width: 90%; /* Takes up most of the container on smaller screens */
+  text-align: center; /* Optional: makes it look better on narrow screens */
+}
+
+/* Styling for the heading inside the bottom section */
+.about .aboutBottom h1 {
+  font-weight: 400; /* Normal font weight */
+  font-size: 70px; /* Large font size */
+  color: black; /* Black text */
+  height: 30px; /* Fixed height */
+  display: flex; /* Flex container (for centering) */
+  justify-content: center; /* Center text horizontally */
+  transform: translateY(-40px); /* Move heading upward for better layout */
+}
+
+/* For medium screens like tablets (≤ 900px) */
+@media only screen and (max-width: 900px) {
+  .aboutBottom p {
+    font-size: 16px; /* Slightly smaller text */
+    width: 95%; /* More fluid width */
+  }
+}
+
+/* For small screens like phones (≤ 600px) */
+@media only screen and (max-width: 600px) {
+  .aboutBottom p {
+    font-size: 14px; /* Smaller text for small screens */
+    width: 100%; /* Full width */
+    padding: 0 10px; /* Add padding for breathing room */
+  }
+}

@@ -1,0 +1,53 @@
+/* Root container styling */
+#root {
+  max-width: 1280px; /* Limit maximum width to center content on large screens */
+  margin: 0 auto; /* Center the container horizontally */
+  padding: 2rem; /* Add spacing inside the container */
+  text-align: center; /* Center-align text */
+}
+
+/* Base logo styling */
+.logo {
+  height: 6em; /* Set the logo height */
+  padding: 1.5em; /* Add space around the logo */
+  will-change: filter; /* Optimize performance for filter transitions */
+  transition: filter 300ms; /* Smooth filter transition on hover */
+}
+
+/* Drop shadow effect when hovering on any logo */
+.logo:hover {
+  filter: drop-shadow(0 0 2em #646cffaa);
+}
+
+/* Custom hover effect for React-specific logo */
+.logo.react:hover {
+  filter: drop-shadow(0 0 2em #61dafbaa);
+}
+
+/* Keyframes for continuous spinning animation */
+@keyframes logo-spin {
+  from {
+    transform: rotate(0deg); /* Start at 0 degrees */
+  }
+  to {
+    transform: rotate(360deg); /* End at full rotation */
+  }
+}
+
+/* Apply spinning animation to the second anchor tag's logo
+   if user has not requested reduced motion (accessibility setting) */
+@media (prefers-reduced-motion: no-preference) {
+  a:nth-of-type(2) .logo {
+    animation: logo-spin infinite 20s linear; /* Infinite, smooth spin every 20 seconds */
+  }
+}
+
+/* Card component styling */
+.card {
+  padding: 2em; /* Add internal spacing */
+}
+
+/* Subtle styling for "read the docs" text */
+.read-the-docs {
+  color: #888; /* Gray color for less emphasis */
+}

@@ -1,0 +1,104 @@
+/* Style for the home section */
+.home {
+  width: 100%; /* Take up full width of the page */
+  height: 90vh; /* Occupy 90% of the viewport height */
+  display: flex; /* Use flexbox layout */
+  justify-content: center; /* Center children horizontally */
+  align-items: left; /* Align children to the start vertically (should probably be 'flex-start') */
+  flex-direction: column; /* Stack children vertically */
+  background-position: center; /* Center the background image */
+  background-repeat: no-repeat; /* Don't repeat the background image */
+  background-size: cover; /* Scale background to cover the entire area */
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif; /* Use sans-serif fonts */
+}
+
+/* Container for header content */
+.headerContainer {
+  width: auto; /* Let content determine the width */
+  margin-left: 50px; /* Space from the left */
+}
+
+/* Main heading in headerContainer */
+.headerContainer h1 {
+  justify-content: center; /* Not effective here—doesn't apply to h1 */
+  align-items: center; /* Same here—remove or use flexbox */
+  font-size: 90px; /* Very large font size for main heading */
+  height: 60px; /* Fixed height (might overflow with large font) */
+  font-weight: 50; /* Very light font weight (unusual value) */
+  color: black; /* Black text */
+}
+
+/* Paragraph under the heading */
+.headerContainer p {
+  padding: 0; /* Remove padding */
+  font-size: 40px; /* Large font for emphasis */
+  font-weight: lighter; /* Lighter font for contrast */
+  color: black; /* Black text */
+}
+
+/* Call-to-action button */
+.headerContainer button {
+  color: black; /* Initial text color (overwritten below) */
+  border: none; /* No border */
+  border-radius: 5px; /* Slightly rounded corners */
+  cursor: pointer; /* Pointer cursor on hover */
+  justify-content: center; /* Not effective here unless inside a flexbox */
+  background-color: #121619; /* Dark background */
+  height: 50px; /* Fixed height */
+  width: 180px; /* Fixed width */
+  color: white; /* White text (overwrites earlier black) */
+  text-decoration: none; /* No underline */
+  font-size: 20px; /* Readable text size */
+}
+
+/* Button hover effect */
+.headerContainer button:hover {
+  background-color: #07090a; /* Even darker on hover */
+  cursor: pointer; /* Still shows pointer cursor */
+  transition: 0.3s ease-in; /* Smooth transition */
+}
+
+/* Responsive styles for smaller screens */
+@media only screen and (max-width: 650px) {
+  /* Center the content on small screens */
+  .home {
+    justify-content: center;
+    align-items: center;
+  }
+
+  /* Style the header container differently on small screens */
+  .headerContainer {
+    margin-left: 0px; /* Remove left margin */
+    border-radius: 10px; /* Add rounded corners */
+    padding: 10px; /* Add internal spacing */
+    width: 80%; /* Reduce width for better fit */
+    display: flex; /* Use flexbox */
+    justify-content: center; /* Center content horizontally */
+    align-items: center; /* Center content vertically */
+    flex-direction: column; /* Stack children vertically */
+    background-color: #121619; /* Dark background */
+    color: white; /* White text */
+  }
+
+  .headerContainer h1 {
+    font-size: 40px; /* Smaller font for heading */
+    height: 30px; /* Smaller height */
+    color: white;
+  }
+
+  .headerContainer p {
+    font-size: 30px; /* Slightly smaller paragraph */
+    color: white;
+  }
+
+  .headerContainer button {
+    background-color: white; /* Light background for contrast */
+    color: #121619; /* Dark text */
+    margin-bottom: 30px; /* Space below button */
+  }
+
+  .headerContainer button:hover {
+    background-color: rgb(225, 225, 225); /* Light gray on hover */
+    color: #121619; /* Maintain dark text */
+  }
+}
