@@ -9,7 +9,7 @@ function About() {
         style={{ backgroundImage: `url(${MultiplePizzas})` }}
       ></div>
       <div className="aboutBottom">
-        <h1> ABOUT US</h1>
+        <h1>Pizzeria </h1>
         <p>
           At <strong>albie's Pizzeria</strong> , pizza isn't just food — it's
           our passion. Founded on tradition and fired with flavor, we craft
